@@ -1,4 +1,4 @@
-使用yolov3模型进行目标检测测试。   
+使用yolov3模型进行目标检测测试。参考网址：https://blog.paperspace.com/tag/series-yolo/   
 1、没有训练模型，直接使用yolov3.cfg和yolov3.weights初始化网络，然后直接进行测试。yolov3.weights自行下载。   
 2、解析cfg文件时，一定要注意空格行、注释行以及[]、空格的处理。   
 3、构建卷积层时，要注意以下几点：   
