@@ -6,7 +6,7 @@
     （2）pad为1时，padding要根据kernel_size设置；pad为0时，padding为0。   
 4、构建shortcut层和route层时，都使用一个空层。在forward时，前者是add，后者是cat。   
 5、构建yolo层时，使用一个空层，且记录当前使用的anchors。anchors是两个一对(w,h)。   
-6、forward中yolo层输出的特征图(13*13,26*26,52*52)，皆要进行数据转换：   
+6、forward中yolo层输出的特征图(13 * 13,26 * 26,52 * 52)，皆要进行数据转换：   
     (1)根据输入原图大小与特征图大小确定stride，grid_size。同时要对anchors进行放缩。   
     (2)对特征图进行view,[batch_size,grid_size * grid_size * num_anchors,num_classes+5]。   
     (3)sigmoid使用。对中心点x,y的预测以及对类别的预测(多标签分类)。   
